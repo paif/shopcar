@@ -12,3 +12,20 @@ def main(strings):
     total_price = sum(goods_dict.values())
     result = Handle.coupons(deadline, coupons, total_price)
     return result
+
+
+s = """
+
+
+1 * ipad : 2399.00
+1 * 显示器 : 1799.00
+12 * 啤酒 : 25.00
+5 * 面包 : 9.00
+
+2013.11.11
+
+
+"""
+
+print(main(s))
+
