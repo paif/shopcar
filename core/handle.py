@@ -21,7 +21,7 @@ class Handle:
                     # 结算日期超过促销日期
                     pass
                 
-        return parse_goods_lists(goods_infos)
+        return parse_goods_list(goods_infos)
     
     @staticmethod
     def coupons(deadline, coup, total_price):
