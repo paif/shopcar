@@ -31,7 +31,7 @@ class Paramter(object):
         for good in good_list:
             _, g_price = good.split(":")
             g_num, g_name = _.strip().split("*")
-            result.append([int(g_num), g_name.strip(), float(g_price)])
+            result.append([int(g_num), g_name.strip(), float("%2.f"%float(g_price))])
         return result
 
     def parse_other(self):
@@ -40,7 +40,6 @@ class Paramter(object):
         else:
             other = self.strings.strip().split("\n\n")[2]
         other_list = other.split("\n")
-        # print(other_list)
         if len(other_list) > 1:
             deadline, coupons = other_list[0], other_list[1]
             return deadline.strip(), coupons.strip()
