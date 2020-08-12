@@ -21,7 +21,7 @@ class Paramter(object):
                 result.append([date.strip(), float(rate), category.strip()])
             return result
 
-    def parse_good(self):
+    def parse_goods(self):
         result = []
         if self.strings[:2] == "\n\n":
             goods = self.strings.strip().split("\n\n")[0]
